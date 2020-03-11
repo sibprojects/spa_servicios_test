@@ -26,6 +26,10 @@ Route::group(['prefix'=>'api'],function(){
 	/* get all Spa services */
 	Route::get('/spa/services','Api\SpaServicesController@getServices');
 
+	/* get all Spa services by language iso3 code */
+	Route::get('/spa/services/{lng}','Api\SpaServicesController@getServicesByLanguageIso3')
+		->where(['lng' => '[A-Za-z]{3}']);;
+
 	/* get all Spa Horarios by dates dd.mm.YYYY-dd.mm.YYYY */
 	Route::get('/spa/services/horario/{inicialDate}-{finalDate}','Api\SpaServicesHorarioController@getHorario');
 

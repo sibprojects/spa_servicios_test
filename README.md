@@ -13,10 +13,16 @@ Use this api commands:
 - get all services:
 http://yourdomain.com/api/spa/services
 
+- get all services translated by language iso3:
+http://yourdomain.com/api/spa/services/[lngIso3]
+Ex.1: http://yourdomain.com/api/spa/services/eng
+Ex.2: http://yourdomain.com/api/spa/services/rus
+
 - get horarios
-http://yourdomain.com/api/spa/services/horario/<date_from>-<date_to>
+http://yourdomain.com/api/spa/services/horario/[date_from]-[date_to]
+
 where dates in format dd.mm.YYYY, ex. 22.03.2020-25.03.2020,
-http://yourdomain.com/api/spa/services/horario/22.03.2020-25.03.2020
+Ex: http://yourdomain.com/api/spa/services/horario/22.03.2020-25.03.2020
 
 - get reservas
 http://yourdomain.com/api/spa/services/reserva
@@ -35,3 +41,4 @@ use method post and array(
     
     'hora' => integer,    
 )
+
