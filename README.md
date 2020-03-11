@@ -37,7 +37,7 @@ use method post and array(
     
     'commentarios' => string,
     
-    'dia' => YYYY-MM-DD,
+    'dia' => date (YYYY-MM-DD),
     
     'hora' => integer,    
 )
