@@ -17,6 +17,14 @@ class SpaServicesReservaController extends Controller
 			]);
 		}
 
+		//
+		public function addReservaForm(){
+
+			$services = \App\SpaServices::all();
+			$vars = [ 'services'=>$services ];
+	    return response()->view('createReserva', $vars);
+		}
+
     // create new spa reserva
 		public function create(Request $request){
 

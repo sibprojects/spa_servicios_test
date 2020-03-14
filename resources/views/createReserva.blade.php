@@ -69,10 +69,14 @@
             <div class="content">
                 <div class="title m-b-md">Create nueva reserva</div>
 
-								<form method="POST" action="{{ url('/api/spa/services/reserva/create') }}">
+								<form method="POST" action="{{ route('apiReservaCreate') }}" style="text-align:left;">
 
 									Service:<br>
-									<input type="text" name="service_id" value=""><br><br>
+									<select name="service_id">
+									@foreach($services as $service)
+										<option value="{{ $service->id }}">{{ $service->nombre }}, {{ $service->precio }}&euro;</option>
+									@endforeach
+									</select><br><br>
 
 									Nombre:<br>
 									<input type="text" name="nombre" value=""><br><br>

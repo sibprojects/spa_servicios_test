@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 /* here we can test addign new reserva */
-Route::get('/createReserva', function () {
-    return view('createReserva');
-});
+Route::get('/createReserva',['uses'=>'Api\SpaServicesReservaController@addReservaForm','as'=>'addReservaForm']);
 
 // Api methods
 Route::group(['prefix'=>'api'],function(){
@@ -37,6 +35,6 @@ Route::group(['prefix'=>'api'],function(){
 	Route::get('/spa/services/reserva','Api\SpaServicesReservaController@getReservas');
 
 	/* add Spa reserva */
-	Route::post('/spa/services/reserva/create','Api\SpaServicesReservaController@create');
+	Route::post('/spa/services/reserva/create',['uses'=>'Api\SpaServicesReservaController@create', 'as'=>'apiReservaCreate']);
 
 });
