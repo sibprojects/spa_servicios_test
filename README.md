@@ -5,7 +5,7 @@ How to test:
 1. Download package
 2. Setup your db access in file: .env 
 3. In the root folder run command: php artisan migrate
-4. Import spa.sql file in your db (use PhpMyAdmin ex.)
+4. Import spa.sql file in your db (use PhpMyAdmin ex.) or use commend: php artisan db:seed --class=spa
 5. Setup root folder of your web server to /public/
 
 Use this api commands:
